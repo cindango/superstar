@@ -2,8 +2,8 @@
 import logo from './Logo.svg';
 </script>
 
-<img class="logo-desktop" src={logo} width="112" height="24" alt="Infima" />
-<img class="logo-mobile" src={logo} width="96" height="20" alt="Infima" />
+<img class="logo-desktop" src={logo} width="214" height="100" alt="Infima" />
+<img class="logo-mobile" src={logo} width="107" height="50" alt="Infima" />
 
 <style>
   .logo-desktop {

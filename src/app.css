@@ -73,14 +73,14 @@ h2,
 h3,
 h4,
 p {
-	font-weight: 300;
+	font-weight: 400;
 	color: var(--heading-color);
 	line-height: 1.25;
 }
 
 p {
 	line-height: 1.5;
-	letter-spacing: .03rem;
+	margin-bottom: 1rem;
 }
 
 a {
@@ -96,16 +96,18 @@ a:hover {
 
 h1 {
 	font-size: 2.5rem;
-	font-weight: 400;
+	font-weight: bold;
 }
 
 h2 {
 	font-size: 2rem;
+	font-weight: bold;
 }
 
 h3 {
 	font-size: 1.3rem;
 	line-height: 1.45;
+	font-weight: bold;
 }
 
 h4 {
@@ -436,7 +438,7 @@ button:focus:not(:focus-visible) {
 
 @media (min-width: 720px) {
 	.container {
-		padding: 8rem 2rem;
+		padding: 10rem 2rem;
 	}
 	.container:last-child {
 		padding-bottom: 16rem;
@@ -466,7 +468,7 @@ button:focus:not(:focus-visible) {
 		font-weight: 400;
 	}
 	body {
-		font-size: 1.15rem;
+		font-size: 1.25rem;
 	}
 	.box {
 		padding: 2.25rem;

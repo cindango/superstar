@@ -8,12 +8,12 @@ module.exports = {
   ],
   daisyui: {
     styled: true,
-    themes: false,
-    base: false,
-    utils: false,
+    themes: true,
+    base: true,
+    utils: true,
     logs: true,
     rtl: false,
-    prefix: "daisy-",
+    prefix: "",
     darkTheme: "light",
   },
 };
