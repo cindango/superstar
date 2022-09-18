@@ -1,0 +1,489 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	font-family: 'Barlow', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--font-condensed: 'Barlow Semi Condensed', 'Barlow', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--pure-white: #ffffff;
+	--primary-color: #B829EB;
+	--primary-color-link: #c780ff;
+	--secondary-color: #5F4BE2;
+	--tertiary-color: #edf0f8;
+	--accent-color: #ff3e00;
+	--heading-color: rgba(255, 255, 255, 1);
+	--text-color: #ffffff;
+	--background-without-opacity: rgba(255, 255, 255, 1);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	--background-color: rgb(26, 25, 28);
+	--background-color-rgb: 26, 25, 28;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon.eot?xq3j7u');
+  src:  url('/fonts/icomoon.eot?xq3j7u#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?xq3j7u') format('truetype'),
+    url('/fonts/icomoon.woff?xq3j7u') format('woff'),
+    url('/fonts/icomoon.svg?xq3j7u#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-color: var(--background-color);
+	font-size: 1rem;
+	color: var(--text-color);
+}
+
+#svelte {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 5rem 1.25rem;
+}
+
+.container:last-child {
+	padding-bottom: 8rem;
+}
+
+#heading > .container, #splash > .container {
+	padding-bottom: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	font-weight: 300;
+	color: var(--heading-color);
+	line-height: 1.25;
+}
+
+p {
+	line-height: 1.5;
+	letter-spacing: .03rem;
+}
+
+a {
+	color: var(--primary-color-link);
+	text-decoration: none;
+	cursor: pointer;
+	transition: color .5s ease;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.3rem;
+	line-height: 1.45;
+}
+
+h4 {
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+pre {
+	font-size: 16px;
+	font-family: var(--font-mono);
+	background-color: rgba(255, 255, 255, 0.45);
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+	padding: 0.5em;
+	overflow-x: auto;
+	color: var(--text-color);
+}
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+input, select, textarea {
+	color: #fff;
+	padding: 0.5rem;
+	background: #27262e;
+	border: 1px solid #333;
+  font-size: 1.1rem;
+	outline: 0;
+	border-radius: 2px;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #27262e inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+input:autofill {
+	border-color: #333;
+	background: #27262e;
+}
+
+input:focus {
+	border-color: #aaa;
+}
+
+select {
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+	background-image:
+    linear-gradient(45deg, transparent 50%, rgba(255,255,255,.8) 50%),
+    linear-gradient(135deg, rgba(255,255,255,.8) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px);
+	background-size:
+    5px 5px,
+    5px 5px;
+	background-repeat: no-repeat;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* HUBSPOT FORMS */
+
+#request fieldset, .hs-submit {
+	margin: 0 auto;
+}
+
+.hs-form-field {
+	margin: .5rem 0;
+}
+
+#request fieldset.form-columns-1 .hs-input:not([type=checkbox]), #request fieldset.form-columns-2 .hs-input {
+	width: 100%;
+}
+
+#request fieldset.form-columns-1 .input, #request fieldset.form-columns-2 .input {
+	margin: 0;
+}
+
+#request fieldset.form-columns-2 {
+	display: flex;
+	gap: 15px;
+}
+
+#request .hs-form-field label:not(.hs-form-booleancheckbox-display) {
+	font-family: var(--font-condensed);
+	font-size: 1rem;
+	display: inline-block;
+	padding-bottom: 4px;
+	color: rgba(255,255,255,.7);
+}
+
+#request .hs-error-msgs label.hs-error-msg {
+	color: #fffc6b;
+}
+
+.hs-form-required {
+	color: white;
+}
+
+.hs-submit {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.form-consent p {
+	font-size: .75rem;
+	margin: .5rem auto 0;
+	max-width: 500px;
+	color: rgba(255,255,255,.75);
+}
+
+.hs-form-booleancheckbox-display {
+	display: flex;
+	line-height: 1.2;
+	position: relative;
+}
+
+fieldset.form-columns-1 .hs-form-booleancheckbox-display input[type=checkbox].hs-input {
+	height: 25px;
+	width: 25px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	border: 1px solid #fff;
+	border-radius: 1px;
+	outline: none;
+	transition-duration: 0.3s;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+fieldset.form-columns-1 .hs-form-booleancheckbox-display input[type=checkbox].hs-input:checked {
+	border: 1px solid #fff;
+	background-color: #fff;
+}
+
+fieldset.form-columns-1 .hs-form-booleancheckbox-display input[type=checkbox].hs-input:checked + span:before {
+	content: '\2713';
+	display: block;
+	text-align: center;
+	color: var(--background-color);
+	position: absolute;
+	left: 4px;
+	top: 0;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+#request .legal-consent-container .field.hs-form-field {
+	margin-bottom: 8px;
+	margin-top: 16px;
+}
+
+#request .legal-consent-container .hs-form-booleancheckbox-display>span {
+	margin-left: 5px;
+}
+
+#request .legal-consent-container .hs-form-booleancheckbox-display p {
+	font-size: 1.1rem;
+	font-family: var(--font-condensed);
+	margin-left: 5px;
+}
+
+#request .hs-button.primary {
+	padding: 10px 40px 12px;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+.button, .hs-button.primary {
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: .03rem;
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	color: #fff;
+	cursor: pointer;
+}
+
+.button.text-btn {
+  font-size: .8rem;
+}
+
+.button span {
+	margin-right: -10px;
+}
+
+.button span, .button.text-btn span {
+	font-size: 20px;
+}
+
+.button:hover {
+	text-decoration: none;
+}
+.button.primary-btn, .hs-button.primary {
+	border-radius: 2px;
+	margin-top: 20px;
+	padding: 6px 12px 8px;
+	border: 1px solid;
+	transition: background 1s ease, border .25s ease;
+	font-size: .9rem;
+}
+
+.button.primary-btn.btn-filled, #request .hs-button.primary {
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+	transition: background 1s ease, border 1s ease;
+}
+
+.button.primary-btn.btn-filled:hover, #request .hs-button.primary:hover {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+}
+
+.button.primary-btn:hover, .hs-button.primary:hover {
+	background: var(--secondary-color);
+	border-color: var(--secondary-color);
+}
+
+.button.primary-btn.hover-pink:hover {
+	background: var(--primary-color);
+	border-color: var(--primary-color);
+}
+
+.box {
+	padding: 1.5rem;
+	padding-bottom: 2rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-left: 1px solid rgba(255, 255, 255, 0.9);
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	gap: 20px;
+	transition: border .5s ease, box-shadow .5s ease;
+	position: relative;
+}
+.box:hover {
+	border: 1px solid rgba(255, 255, 255, 1);
+	box-shadow: 15px 15px 30px rgba(236,117,255,.2);
+	text-decoration: none;
+}
+
+.section-head {
+	border-top: 1px solid rgba(255,255,255,.2);
+	padding-top: 1.25rem;
+	padding-bottom: 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	gap: 3rem;
+}
+.section-head label h2 {
+	font-size: .95rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	font-weight: 400;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+	font-size: 24px;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-expand_more:before {
+  content: "\e900";
+}
+.icon-navigate_next:before {
+  content: "\e901";
+}
+.icon-chevron_right:before {
+  content: "\e901";
+}
+.icon-navigate_before:before {
+  content: "\e902";
+}
+.icon-chevron_left:before {
+  content: "\e902";
+}
+
+@media (min-width: 720px) {
+	.container {
+		padding: 8rem 2rem;
+	}
+	.container:last-child {
+		padding-bottom: 16rem;
+	}
+	#heading > .container, #splash > .container {
+		padding-bottom: 8rem;
+	}
+	.section-head {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    gap: 4rem;
+	}
+	.section-head label h2 {
+		font-size: 1.15rem;
+	}
+	h1 {
+		font-size: 4.25rem;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+	h3 {
+		font-size: 2rem;
+	}
+	h4 {
+		font-size: 1.9rem;
+		font-weight: 400;
+	}
+	body {
+		font-size: 1.15rem;
+	}
+	.box {
+		padding: 2.25rem;
+		padding-bottom: 5rem;
+		min-height: 375px;
+	}
+	.button.primary-btn {
+		border: 1px solid;
+		padding: 12px 20px 14px;
+		font-size: 1.1rem;
+		font-weight: 500;
+	}
+  .button.text-btn {
+    font-size: .9rem;
+  }
+	.button span, .button.text-btn span {
+		font-size: 22px;
+	}
+
+}
