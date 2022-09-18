@@ -24,27 +24,5 @@
 </div>
 
 <style>
-  .content {
-    margin: 0 auto;
-  }
-  :global(.content p) {
-    margin: 0 0 1.5rem;
-    font-size: 1rem;
-  }
-  :global(.content blockquote) {
-    margin: 2rem;
-    border-left: 1px solid rgba(255,255,255,.8);
-    padding-left: 2rem;
-  }
-  :global(.content b, .content strong) {
-  	font-weight: 600;
-  }
-  @media (min-width:720px) {
-    :global(.content p) {
-      font-size: 1.25rem;
-    }
-    .heading .meow {
-      font-size: 1.25rem;
-    }
-  }
+
 </style>

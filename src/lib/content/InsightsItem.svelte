@@ -31,17 +31,5 @@
 </a>
 
 <style>
-  .meow {
-    text-transform: lowercase;
-    color: var(--text-color);
-    border-bottom: 0.8px solid rgba(255,255,255,.9);
-    padding-bottom: 0.25rem;
-  }
-  .box {
-    gap: 30px;
-    overflow-x: auto;
-  }
-  h4 {
-    width: 90%;
-  }
+
 </style>

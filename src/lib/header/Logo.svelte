@@ -1,5 +1,5 @@
 <script>
-import logo from './InfimaLogo_Thin.svg';
+import logo from './Logo.svg';
 </script>
 
 <img class="logo-desktop" src={logo} width="112" height="24" alt="Infima" />
